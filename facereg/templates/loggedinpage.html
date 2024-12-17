@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}"/>
+  <script src="{% static 'js/javascript.js' %}" defer></script>
+  <script src="{% static 'js/index.js' %}" defer></script>
+  <title>Home</title>
+</head>
+<body>
+  <header>
+    <a class="home__icon" title="home" href="/"><img src="../media/icons/home.png"/></a>
+    <div class="nav">
+      <button class="nav__icon" title="notifications"><img src="../media/icons/bell.png"/></button>
+      <a href="{% logout/ %}"><img src="./images/icons/logout.png"/></a> 
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <button class="sidebar__btn menu" title="menu"><img src="../media/icons/menu.png"/></button>
+    <button class="sidebar__btn" title="photo editor" onclick="window.location.href='/editor';">
+      <img src="../media/icons/editor.png"/>
+      <span class="sidebar__btn__span">Photo editor</span>
+    </button>
+    <button class="sidebar__btn" title="gallery">
+      <img src="../media/icons/gallery.png"/>
+      <span class="sidebar__btn__span">Gallery</span>
+    </button>
+  </aside>
+
+  <main class="main">
+    <div class="cover">
+      <img src="../media/hero-3.jpg"/>
+    </div>
+
+    <section class="title">
+      <h1 class="title__h1">PHOTO EDITOR</h1>
+      <button class="title__btn">Edit now</button>
+    </section>
+
+    <section class="hero">
+      <div class="hero__image">
+        <img src="../media/hero-3.jpg"/>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  font-family: Poppins, sans-serif, Arial;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+:root {
+  --bg: #F9F6EE;
+  --w: white;
+  --op: #FAF9F6;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+a {
+  color: black;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  background: var(--bg);
+}
+
+/*header styling*/
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 70px;
+  background: var(--w);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 10px;
+  z-index: 200;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.home__icon, .nav__icon, .nav__logout img {
+  height: 50px;
+  width: 50px;
+}
+
+header .nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav__icon {
+  background: none;
+}
+
+.nav__text {
+  font-size: 24px;
+}
+
+.nav__logout {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.nav__logout span {
+  font-size: 24px;
+}
+
+/*sidebar styling*/
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  bottom: 0;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  background: white;
+  z-index: 100;
+  overflow-y: scroll;
+}
+
+.sidebar__btn {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  background: none;
+}
+
+.sidebar__btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.sidebar__btn__span {
+  font-size: 24px;
+  display: none;
+}
+
+.show {
+  display: block;
+}

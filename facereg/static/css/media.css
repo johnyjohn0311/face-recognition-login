@@ -1,0 +1,51 @@
+@media (max-width: 670px) {
+  /*header styling*/
+  header {
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  .home__icon, .nav__icon, .nav__logout img {
+    height: 30px;
+    width: 30px;
+  }
+
+  header .nav {
+    gap: 10px;
+  }
+  
+  .nav__logout span {
+    font-size: 18px;
+  }
+
+  .nav__text {
+    font-size: 18px;
+  }
+
+  /*sidebar styling*/
+  .sidebar {
+    left: 0;
+    top: unset;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    height: 70px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: unset;
+    overflow-y: unset;
+    overflow-x: scroll;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .main {
+    padding: 10px;
+    padding-bottom: 70px;
+    left: 0;
+    right: 0;
+  }
+}

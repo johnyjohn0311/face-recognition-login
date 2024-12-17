@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}"/>
+  <script src="{% static 'js/javascript.js' %}" defer></script>
+  <script src="{% static 'js/login.js' %}" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>Log in</title>
+</head>
+<body>
+  <header>
+    <a class="home__icon" title="home" href="/"><img src="../media/icons/home.png"/></a>
+    <div class="nav">
+      <button class="nav__icon" title="notifications"><img src="../media/icons/bell.png"/></button>
+      <a class="nav__text" href="/signup">Sign up</a>
+      <a class="nav__text" href="/login">Log in</a>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <button class="sidebar__btn menu" title="menu"><img src="../media/icons/menu.png"/></button>
+    <button class="sidebar__btn" title="gallery">
+      <img src="../media/icons/gallery.png"/>
+      <span class="sidebar__btn__span">Gallery</span>
+    </button>
+  </aside>
+
+  <main>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="text-center">
+        <video autoplay="true" id="video-element"></video>
+      </div>
+  
+      <div id="img-element"></div>
+  
+      <div class="text-center mt-3">
+          <button class="btn btn-primary" id="capture-btn">take photo</button>
+          <button class="btn btn-info" id="reload-btn">reload</button>
+      </div> 
+    </form>
+  </main>
+</body>
+</html>

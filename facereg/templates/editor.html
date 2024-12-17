@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/edit.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}"/>
+  <script src="{% static 'js/javascript.js' %}" defer></script>
+  <script src="{% static 'js/editor.js' %}" defer></script>
+  <title>Photo Editor</title>
+</head>
+<body>
+  <header>
+    <a class="home__icon" title="home" href="/"><img src="../media/icons/home.png"/></a>
+    <div class="nav">
+      <a class="nav__icon" title="notifications"><img src="../media/icons/bell.png"/></a>
+      <form action="/logout">
+        <button style="background: none; width: fit-content; height: fit-content;">
+          <img src="../media/icons/logout.png"/>
+        </button> 
+      </form>
+    </div>
+  </header>
+
+  <div class="options">
+    <button class="options__btn"><img src="../media/icons/upload.png"/>Upload image</button>
+    <button class="options__btn"><img src="../media/icons/download.png"/>Download</button>
+  </div>
+  
+  <aside class="sidebar">
+    <button class="sidebar__btn" title="resize">
+      <img src="../media/icons/resize.png"/>
+      <span class="sidebar__btn__span">Resize</span>
+    </button>
+    <button class="sidebar__btn" title="adjust">
+      <img src="../media/icons/adjust.png"/>
+      <span class="sidebar__btn__span">Adjust</span>
+    </button>
+  </aside>
+
+  <main class="main">
+    <div class="edit">
+      <img src="../media/transparent-background.jpg"/>
+    </div>
+  </main>
+
+  <aside class="rightSidebar">
+  </aside>
+</body>
+</html>

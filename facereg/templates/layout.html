@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
+  {% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+  {% endblock %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}"/>
+  <script src="{% static 'js/javascript.js' %}" defer></script>
+  {% block scripts %}
+    <script src="{% static 'js/index.js' %}" defer></script>
+  {% endblock %}
+  <title>Home</title>
+</head>
+<body>
+  <header>
+    <a class="home__icon" title="home" href="/"><img src="../media/icons/home.png"/></a>
+    <div class="nav">
+      <button class="nav__icon" title="notifications"><img src="../media/icons/bell.png"/></button>
+      {% if user.is_authenticated %}
+        <a href="{% logout/ %}"><img src="./images/icons/logout.png"/></a> 
+      {% else %}
+        <a class="nav__text" href="/signup">Sign up</a>
+        <a class="nav__text" href="/login">Log in</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <button class="sidebar__btn menu" title="menu"><img src="../media/icons/menu.png"/></button>
+    <button class="sidebar__btn" title="photo editor" onclick="window.location.href='/editor';">
+      <img src="../media/icons/editor.png"/>
+      <span class="sidebar__btn__span">Photo editor</span>
+    </button>
+    <button class="sidebar__btn" title="gallery">
+      <img src="../media/icons/gallery.png"/>
+      <span class="sidebar__btn__span">Gallery</span>
+    </button>
+  </aside>
+
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

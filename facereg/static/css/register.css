@@ -1,0 +1,61 @@
+main {
+  position: absolute;
+  top: 70px;
+  left: 80px;
+  bottom: 0;
+  right: 0;
+  height: fit-content;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#video-element {
+  width: calc(100% - 50px);
+  height: auto;
+}
+
+#img-element {
+  width: calc(100% - 50px);
+  height: auto;
+}
+
+.text-center {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: black;
+  color: white;
+  text-align: center;
+  align-content: center;
+  border-radius: 2px;
+  padding: 0 10px;
+  height: 50px;
+}
+
+.not-visible {
+  display: none;
+}
+
+@media (max-width: 670px) {
+  .main {
+    top: 50px;
+    width: 100%;
+    gap: 10px;
+  }
+
+  #video-element {
+    width: 100%;
+  }
+}
