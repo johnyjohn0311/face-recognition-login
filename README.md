@@ -12,10 +12,11 @@ Hướng dẫn tạo tài khoản admin
 
 Cấu trúc thư mục
 1) Thư mục facereg là thư mục chính dùng để chạy chương trình, trong đó có file utils.py làm nhiệm vụ trích xuất ra khuôn mặt và so sánh hình ảnh, file view.py nhận dữ liệu hình ảnh từ người dùng chụp qua webcam và lưu vào cơ sở dữ liệu vào thư mục media/login
-2) Thư mục media dùng để chứa các file hình ảnh người dùng đăng tải lên qua webcam hoặc thông qua cpanel
+2) Thư mục media dùng để chứa các file hình ảnh người dùng đăng tải lên qua webcam hoặc thông qua cpanel, với media/profile chứa hình ảnh người dùng đã đăng ký đăng tải hình ảnh lên thông qua cpanel, với media./login chứa hình ảnh người dùng chụp qua webcam
 3) Thư mục static lưu trữ các file html, css và javascript, file login.js có chức năng chụp hình của người dùng đăng nhập thông qua webcam và gửi đến server thông qua ajax
 4) Thư mục profiles phục vụ cho việc tạo form lấy dữ liệu người dùng đăng ký
 5) Thư mục login phục vụ cho việc lấy dữ liệu hình ảnh người dùng chụp qua webcam và lưu vào cơ sở dữ liệu
+6) Thư mục ouput chứa các hình ảnh khuôn mặt được trích xuất ra để so sánh
    
 Giải thích chương trình
     Đầu tiên người dùng có thể đăng ký để tạo tài khoản của mình, sau khi đã đăng ký thì người dùng có thể đăng hình ảnh có chứa khuôn mặt của mình lên thông qua cpanel trên trang admin ở mục profile, ảnh của người dùng sẽ được lưu trữ trong thư mục media/profile.
