@@ -29,5 +29,5 @@ Giải thích chương trình
     Biến best_match là kết quả so sánh từng cặp ảnh một sau khi sử dụng công thức correlation.
 
 Lưu ý: 
-.) Ảnh cần được chụp trong môi trường đủ sáng hay ảnh phải chụp rõ được khuôn mặt để mô hình có thể tìm được khuôn mặt trên bức hình, nếu không sẽ luôn không thể đăng nhập.
-.) Hoặc ảnh vẫn đủ rõ để nhận diện được khuôn mặt nhưng khi chụp trong môi trường không quá lí tưởng thì kết quả so sánh sử dụng công thức correlation cũng không quá chính xác, nghĩa là cho dù hai khuôn mặt có là cùng của một người thì kết quả cho ra độ tương tự cũng chỉ >= 0.7. Vậy nên, có thể đặt lại ngưỡng để người dùng có thể đăng nhập thành công là 0.7.
+1) Ảnh cần được chụp trong môi trường đủ sáng hay ảnh phải chụp rõ được khuôn mặt để mô hình có thể tìm được khuôn mặt trên bức hình, nếu không sẽ luôn không thể đăng nhập.
+2) Hoặc ảnh vẫn đủ rõ để nhận diện được khuôn mặt nhưng khi chụp trong môi trường không quá lí tưởng thì kết quả so sánh sử dụng công thức correlation cũng không quá chính xác, nghĩa là cho dù hai khuôn mặt có là cùng của một người thì kết quả cho ra độ tương tự cũng chỉ >= 0.7. Vậy nên, có thể đặt lại ngưỡng để người dùng có thể đăng nhập thành công là 0.7.
