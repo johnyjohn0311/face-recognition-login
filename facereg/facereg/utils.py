@@ -98,7 +98,7 @@ def classify_face(img):
             best_match = hist_score
             name = p.user.username
         print(best_match)
-    if (best_match >= 0.8):
+    if (best_match >= 0.7):
         print(best_match)
         return name
     return False
