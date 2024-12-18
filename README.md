@@ -1,4 +1,4 @@
-#**Hướng dẫn chạy file code**
+# **Hướng dẫn chạy file code**
 1) Sau khi tải file code về tạo một thư mục trống, chuyển file code đã tải về vào thư mục vừa tạo
 2) Mở màn hình command prompt hoặc terminal trên vs code, chuyển hướng đến thư mục vừa tạo và thực hiện cài đặt thư mục .venv với câu lệnh
 ```python
