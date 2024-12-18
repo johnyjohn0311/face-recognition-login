@@ -4,13 +4,25 @@ Hướng dẫn chạy file code
 ```python
    py -m venv .venv
 ```
-4) Sau khi cài đặt thư mục .venv thành công, tiếp tục thực hiện câu lệnh Scripts/activate để khởi tạo môi trường ảo đối với window
-5) Sau khi khởi tạo môi trường ảo xong chuyển hướng khỏi thư mục .venv và thực hiện cài đặt django trong thư mục được tạo với câu lệnh py -m pip install Django
-6) Tiếp tục chuyển hướng đến thư mục facereg sau đó gõ py manage.py runserver để chạy chương trình, nó sẽ xuất hiện địa chỉ của trang web
+3) Sau khi cài đặt thư mục .venv thành công, tiếp tục thực hiện câu lệnh
+```python
+   Scripts/activate để khởi tạo môi trường ảo đối với window
+```
+4) Sau khi khởi tạo môi trường ảo xong chuyển hướng khỏi thư mục .venv và thực hiện cài đặt django trong thư mục được tạo với câu lệnh
+```python
+    py -m pip install Django
+```
+5) Tiếp tục chuyển hướng đến thư mục facereg sau đó gõ câu lệnh sau để chạy chương trình, nó sẽ xuất hiện địa chỉ của trang web
+```python
+   py manage.py runserver
+```
 
 Hướng dẫn tạo tài khoản admin
 1) Trên màn hình command prompt hoặc terminal trên vs code điều hướng đến thư mục facereg
-2) Gõ câu lệnh sau để tạo tài khoản admin py manage.py createsuperuser
+2) Gõ câu lệnh sau để tạo tài khoản admin
+```python
+    py manage.py createsuperuser
+```
 3) Tiếp đến nhập vào username là tên người dùng, email có thể bỏ qua bằng cách nhấn enter, tiếp tục thực hiện đặt mật khẩu và xác nhận mật khẩu
 
 Cấu trúc thư mục
