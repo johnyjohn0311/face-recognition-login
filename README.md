@@ -43,7 +43,7 @@
 ## **Lưu ý:**
 1) Ảnh cần được chụp trong môi trường đủ sáng hay ảnh phải chụp rõ được khuôn mặt để mô hình có thể tìm được khuôn mặt trên bức hình, nếu không sẽ luôn không thể đăng nhập.
 2) Hoặc ảnh vẫn đủ rõ để nhận diện được khuôn mặt nhưng khi chụp trong môi trường không quá lí tưởng thì kết quả so sánh sử dụng công thức correlation cũng không quá chính xác, nghĩa là cho dù hai khuôn mặt có là cùng của một người thì kết quả cho ra độ tương tự cũng chỉ >= 0.7. Vậy nên, có thể đặt lại ngưỡng để người dùng có thể đăng nhập thành công là 0.7.
-3) Cần phải xác định chính xác địa chỉ local của file haarcascade_frontal_face_alt2.xml trong thư mục đã cài đặt python có thể tìm kiếm thư mục đó như sau:<br/> Mở màn hình command prompt và gõ câu lệnh sau sẽ xác định được địa chỉ của thư mục đã cài đặt python
+3) Cần phải xác định chính xác địa chỉ local của file haarcascade_frontal_face_alt2.xml trong thư mục đã cài đặt python để có thể chạy thành công, có thể tìm kiếm thư mục đó như sau:<br/> Mở màn hình command prompt và gõ câu lệnh sau sẽ xác định được địa chỉ của thư mục đã cài đặt python
 ```python
    where python
 ```
