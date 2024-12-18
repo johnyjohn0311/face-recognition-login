@@ -9,3 +9,18 @@ Hướng dẫn tạo tài khoản admin
 1) Trên màn hình command prompt hoặc terminal trên vs code điều hướng đến thư mục facereg
 2) Gõ câu lệnh sau để tạo tài khoản admin py manage.py createsuperuser
 3) Tiếp đến nhập vào username là tên người dùng, email có thể bỏ qua bằng cách nhấn enter, tiếp tục thực hiện đặt mật khẩu và xác nhận mật khẩu
+
+Giải thích chương trình
+    Đầu tiên người dùng có thể đăng ký để tạo tài khoản của mình, sau khi đã đăng ký thì người dùng có thể đăng hình ảnh có chứa khuôn mặt của mình lên thông qua cpanel trên trang admin ở mục profile, ảnh của người dùng sẽ được lưu trữ trong thư mục media/profile.
+    
+    Để truy cập cpanel trên trang admin để thực hiện các thao tác chỉnh sửa người dùng có thể tạo tài khoản admin như hướng dẫn ở trên.
+    Sau khi đăng ký thì người dùng sẽ được chuyển đến một trang giao diện khác chỉ những người dùng nào đã đăng ký hoặc đăng nhập thành công mới có thể truy cập.
+    Lúc này người dùng có thể đăng xuất để kiểm tra phần đăng nhập, người dùng sẽ truy cập vào mục đăng nhập và chụp ảnh khuôn mặt thông qua webcam, hình ảnh sẽ được gửi tới server để lưu vào database vào ảnh sẽ được lưu trữ trong thư mục media/login.
+    
+    Hình ảnh người dùng chụp để đăng nhập qua webcam sẽ được chuyển thành ảnh xám và trích xuất ra khuôn mặt để so sánh lần lượt với từng ảnh trong cơ sở dữ liệu bằng cách sử dụng công thức histogram, việc trích xuất ảnh khuôn mặt sẽ sử dụng mô hình haarcascade trong học máy để thực hiện,
+    Giá trị sử dụng công thức correlation sẽ nằm trong khoảng từ 0 đến 1, giá trị cho ra càng gần 1 thì độ tương tự giữa hai khuôn mặt càng cao. Hình ảnh khuôn mặt được trích xuất ra từ ảnh người dụng chụp để đăng nhập qua webcam và ảnh khuôn mặt được trích xuất từ danh sách các ảnh trong cơ sở dữ liệu sẽ được lưu trữ vào cùng thư mục output để so sánh.
+    Biến best_match là kết quả so sánh từng cặp ảnh một sau khi sử dụng công thức correlation.
+
+Lưu ý: 
+.) Ảnh cần được chụp trong môi trường đủ sáng hay ảnh phải chụp rõ được khuôn mặt để mô hình có thể tìm được khuôn mặt trên bức hình, nếu không sẽ luôn không thể đăng nhập.
+.) Hoặc ảnh vẫn đủ rõ để nhận diện được khuôn mặt nhưng khi chụp trong môi trường không quá lí tưởng thì kết quả so sánh sử dụng công thức correlation cũng không quá chính xác, nghĩa là cho dù hai khuôn mặt có là cùng của một người thì kết quả cho ra độ tương tự cũng chỉ >= 0.7. Vậy nên, có thể đặt lại ngưỡng để người dùng có thể đăng nhập thành công là 0.7.
