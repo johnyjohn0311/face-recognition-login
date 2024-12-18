@@ -11,7 +11,7 @@ Hướng dẫn tạo tài khoản admin
 3) Tiếp đến nhập vào username là tên người dùng, email có thể bỏ qua bằng cách nhấn enter, tiếp tục thực hiện đặt mật khẩu và xác nhận mật khẩu
 
 Cấu trúc thư mục
-1) Thư mục facereg là thư mục chính dùng để chạy chương trình, trong đó có file utils.py làm nhiệm vụ trích xuất ra khuôn mặt và so sánh hình ảnh, file view.py nhận dữ liệu hình ảnh từ người dùng chụp qua webcam và lưu vào cơ sở dữ liệu vào thư mục media/login
+1) Thư mục facereg là thư mục chính dùng để chạy chương trình, trong đó có file utils.py làm nhiệm vụ trích xuất ra khuôn mặt và so sánh hình ảnh, file view.py nhận dữ liệu hình ảnh từ người dùng chụp qua webcam và lưu vào cơ sở dữ liệu vào thư mục media/login, cũng như lưu thông tin người dùng đăng ký vào cơ sở dữ liệu
 2) Thư mục media dùng để chứa các file hình ảnh người dùng đăng tải lên qua webcam hoặc thông qua cpanel, với media/profile chứa hình ảnh người dùng đã đăng ký đăng tải hình ảnh lên thông qua cpanel, với media./login chứa hình ảnh người dùng chụp qua webcam
 3) Thư mục static lưu trữ các file html, css và javascript, file login.js có chức năng chụp hình của người dùng đăng nhập thông qua webcam và gửi đến server thông qua ajax
 4) Thư mục profiles phục vụ cho việc tạo form lấy dữ liệu người dùng đăng ký
