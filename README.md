@@ -4,9 +4,9 @@
 ```python
    py -m venv .venv
 ```
-3) Sau khi cài đặt thư mục .venv thành công, tiếp tục thực hiện câu lệnh
+3) Sau khi cài đặt thư mục .venv thành công, tiếp tục thực hiện câu lệnh sau để khởi tạo môi trường ảo đối với window
 ```python
-   Scripts/activate để khởi tạo môi trường ảo đối với window
+   Scripts/activate 
 ```
 4) Sau khi khởi tạo môi trường ảo xong chuyển hướng khỏi thư mục .venv và thực hiện cài đặt django trong thư mục được tạo với câu lệnh
 ```python
@@ -15,6 +15,10 @@
 5) Tiếp tục chuyển hướng đến thư mục facereg sau đó gõ câu lệnh sau để chạy chương trình, nó sẽ xuất hiện địa chỉ của trang web
 ```python
    py manage.py runserver
+```
+6) Để có thể đăng hình ảnh và lưu vào cơ sở dữ liệu cần cài đặt thư viện pillow trong thư mục được tạo, cú pháp như sau:
+```python
+   pip install pillow
 ```
 
 # **Hướng dẫn tạo tài khoản admin**
