@@ -35,10 +35,8 @@ Cấu trúc thư mục
    
 Giải thích chương trình
     Đầu tiên người dùng có thể đăng ký để tạo tài khoản của mình, sau khi đã đăng ký thì người dùng có thể đăng hình ảnh có chứa khuôn mặt của mình lên thông qua cpanel trên trang admin ở mục profile, ảnh của người dùng sẽ được lưu trữ trong thư mục media/profile.
-    
     Để truy cập cpanel trên trang admin để thực hiện các thao tác chỉnh sửa người dùng có thể tạo tài khoản admin như hướng dẫn ở trên. Sau khi đăng ký thì người dùng sẽ được chuyển đến một trang giao diện khác chỉ những người dùng nào đã đăng ký hoặc đăng nhập thành công mới có thể truy cập.
     Lúc này người dùng có thể đăng xuất để kiểm tra phần đăng nhập, người dùng sẽ truy cập vào mục đăng nhập và chụp ảnh khuôn mặt thông qua webcam, hình ảnh sẽ được gửi tới server để lưu vào database vào ảnh sẽ được lưu trữ trong thư mục media/login.
-    
     Hình ảnh người dùng chụp để đăng nhập qua webcam sẽ được chuyển thành ảnh xám và trích xuất ra khuôn mặt để so sánh lần lượt với từng ảnh trong cơ sở dữ liệu bằng cách sử dụng công thức histogram, việc trích xuất ảnh khuôn mặt sẽ sử dụng mô hình haarcascade trong học máy để thực hiện.
     Giá trị sử dụng công thức correlation sẽ nằm trong khoảng từ 0 đến 1, giá trị cho ra càng gần 1 thì độ tương tự giữa hai khuôn mặt càng cao. Hình ảnh khuôn mặt được trích xuất ra từ ảnh người dụng chụp để đăng nhập qua webcam và ảnh khuôn mặt được trích xuất từ danh sách các ảnh trong cơ sở dữ liệu sẽ được lưu trữ vào cùng thư mục output để so sánh.
     Biến best_match là kết quả so sánh từng cặp ảnh một sau khi sử dụng công thức correlation.
